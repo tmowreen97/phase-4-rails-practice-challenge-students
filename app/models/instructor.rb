@@ -1,3 +1,4 @@
 class Instructor < ApplicationRecord
-  has_many :students
+  validates :name, presence: true
+  has_many :students, dependent: :destroy
 end
